@@ -20,8 +20,8 @@ namespace AplikaceShellTry
             VesmirnaCollection = new ObservableCollection<VesmirnyObjekt>(
                 new VesmirnyObjekt[]
                     {
-                    new VesmirnyObjekt {Nazev="Země", Popis="Zde žijeme", VzdalenostOdSlunce=149.6 },
-                    new VesmirnyObjekt {Nazev="Mars", Popis="snaha o kolonizaci", VzdalenostOdSlunce=227.9 },
+                    new VesmirnyObjekt {Nazev="Země", Popis="Země je třetí planeta sluneční soustavy se střední vzdáleností od Slunce asi 1 AU, zároveň největší terestrická planeta v soustavě a jediné planetární těleso, na němž je dle současných vědeckých poznatků potvrzen život.", VzdalenostOdSlunce=149.6 },
+                    new VesmirnyObjekt {Nazev="Mars", Popis="Mars je čtvrtá planeta sluneční soustavy, druhá nejmenší planeta soustavy po Merkuru. Byla pojmenována po římském bohu války Martovi. Jedná se o planetu terestrického typu, tj. s pevným horninovým povrchem pokrytým impaktními krátery, vysokými sopkami, hlubokými kaňony a dalšími útvary. Má dva měsíce nepravidelného tvaru nazvané Phobos a Deimos.", VzdalenostOdSlunce=227.9 },
                     }); ;
             VesmirneObjListView.ItemsSource = VesmirnaCollection;
         }
