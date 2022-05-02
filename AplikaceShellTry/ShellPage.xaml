@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:AplikaceShellTry"
+             mc:Ignorable="d"
+             x:Class="AplikaceShellTry.ShellPage">
+    <Shell.FlyoutHeader>
+            <Frame>
+            <Label Text="SSPŠ" />
+        </Frame>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="SSPŠ" FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Title = "Učitelé">
+            <views:TeacherPage/>
+        </ShellContent>
+
+        <ShellContent Title = "Studenti" Icon="">
+            <views:StudentPage/>
+        </ShellContent>
+    </FlyoutItem>
+</Shell>
