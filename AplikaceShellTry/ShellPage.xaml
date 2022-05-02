@@ -13,12 +13,9 @@
     </Shell.FlyoutHeader>
     <FlyoutItem Title="SSPŠ" FlyoutDisplayOptions="AsMultipleItems">
 
-        <ShellContent Title = "Učitelé">
-            <views:TeacherPage/>
+        <ShellContent Title = "Tělesa" Icon="planeta.png">
+            <views:WikiPage/>
         </ShellContent>
 
-        <ShellContent Title = "Studenti" Icon="">
-            <views:StudentPage/>
-        </ShellContent>
     </FlyoutItem>
 </Shell>

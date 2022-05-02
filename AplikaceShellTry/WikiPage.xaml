@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplikaceShellTry.WikiPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Gray" Padding="24" CornerRadius="0">
+                <Label Text="Objekty v solární soustavě" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+            </Frame>
+            <ListView x:Name="VesmirneObjListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="AliceBlue">
+                                <Label Text="{Binding Nazev}" TextColor="Gray" VerticalOptions="Center"/>
+                                <Label Text=" | " VerticalOptions="Center"/>
+                                <Label Text="{Binding VzdalenostOdSlunce}" TextColor="Gray" VerticalOptions="Center" />
+                                <Label Text="mil. km" VerticalOptions="Center"/>
+                                <ImageButton x:Name="InfoButton" Padding="5, 5" Clicked="InfoButton_Clicked"
+                                    CommandParameter="{Binding .}" WidthRequest="30"
+                                    HorizontalOptions="EndAndExpand"
+                                    />
+                                <ImageButton x:Name="DeleteButton" Padding="5, 5" Clicked="DeleteButton_Clicked" 
+                                    CommandParameter="{Binding .}" WidthRequest="30"
+                                    HorizontalOptions="EndAndExpand" Source="DELETEIMG.png"
+                                    />
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="AddButton" Clicked="AddButton_Clicked" Text="Přidej"/>
+
+            <StackLayout x:Name="AddLayout" IsVisible="False">
+                <Entry x:Name="NameEntry" Placeholder="Nazev"
+            />
+                <Entry x:Name="PopisEntry" Placeholder="Popis"
+            />
+                <Entry x:Name="VzdalenostEntry" Placeholder="Vzdálenost od slunce v mil. KM"
+            />
+                <Button  x:Name="ButADDConfirm" Clicked="ButADDConfirm_Clicked"
+                     Text="Potvrdit"
+                />
+            </StackLayout>
+
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

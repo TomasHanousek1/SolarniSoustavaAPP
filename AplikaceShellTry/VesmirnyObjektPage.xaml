@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplikaceShellTry.VesmirnyObjektPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="AliceBlue">
+            <Frame BackgroundColor="Gray" Padding="24" CornerRadius="0">
+                <Label Text="{Binding Nazev}" TextColor="White" VerticalOptions="Center" FontSize="28" HorizontalOptions="Center"/>
+            </Frame>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Text="{Binding VzdalenostOdSlunce}"  VerticalOptions="Center" FontSize="20" HorizontalOptions="End"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="mil. km od slunce" VerticalOptions="Center" FontSize="20" HorizontalOptions="Center"/>
+
+            </Grid>
+            <Frame BackgroundColor="Gray" Padding="24" CornerRadius="0">
+                <Label Text="Popis" TextColor="White" VerticalOptions="Center" FontSize="28" HorizontalOptions="Center"/>
+            </Frame>
+            <Label  Text="{Binding Popis}"  VerticalOptions="Center" FontSize="20" HorizontalOptions="Start" Padding="10,0,10,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
